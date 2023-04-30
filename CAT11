@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    int d[7];
+    printf("Enter the temperature in Chennai on Sunday ");
+    scanf("%d",&d[0]);
+    printf("Enter the temperature in Chennai on Monday ");
+    scanf("%d",&d[1]);printf("Enter the temperature in Chennai on Tuesday ");
+    scanf("%d",&d[2]);
+    printf("Enter the temperature in Chennai on Wednesday ");
+    scanf("%d",&d[3]);
+    printf("Enter the temperature in Chennai on Thursday ");
+    scanf("%d",&d[4]);
+    printf("Enter the temperature in Chennai on Friday ");
+    scanf("%d",&d[5]);printf("Enter the temperature in Chennai on Saturday ");
+    scanf("%d",&d[6]);
+    printf("The Temperatures in Gangtok are: \n");
+    printf("Sunday: %d\n",13);
+    printf("Monday: %d\n",13);
+    printf("Tuesday: %d\n",13);
+    printf("Wednesday: %d\n",13);
+    printf("Thursday: %d\n",13);
+    printf("Friday: %d\n",13);
+    printf("Saturday: %d\n",13);
+
+}
