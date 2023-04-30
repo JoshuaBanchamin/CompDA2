@@ -1,0 +1,65 @@
+#include <stdio.h>
+void prime(int x)
+{
+    int t=0;
+    for(int i=2;i<x;i++)
+    {
+        if(x%i==0)
+        {
+            printf("%d is not a prime number\n",x);
+            t=1;
+            break;
+        }
+    }
+    if(t==0)
+    {
+        printf("%d is a prime number\n",x);
+    }
+}
+void armstrong(int x)
+{
+    int n=x;
+    int k,sum;
+    while(x>0)
+    {
+        k=x%10;
+        x=x/10;
+        sum=sum+(k*k*k);
+    }
+    if(sum==n)
+    {
+        printf("%d is an armstrong number\n",n);
+    }
+    else
+    {
+        printf("%d is not an armstrong number\n",n);
+    }
+}
+void perfect(int x)
+{
+    int sum=0;
+    for(int i=1;i<x;i++)
+    {
+        if(x%i==0)
+        {
+            sum+=i;
+        }
+    }
+    if(x==sum)
+    {
+        printf("%d is a perfect number\n",x);
+    }
+    else
+    {
+        printf("%d is not a perfect number\n",x);
+    }
+}
+int main() 
+{
+    int n;
+    printf("Enter a number : ");
+    scanf("%d",&n);
+    prime(n);
+    armstrong(n);
+    perfect(n);
+}
