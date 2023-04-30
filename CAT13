@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int k=0;
+    char c[9],c2[3][3],c3[6],passc[6]="abcdbf";
+    printf("Enter the 9 digit code number : ");
+    fgets(c,10,stdin);
+    if(strlen(c)!=9)
+    {
+        printf("Code Invalid");
+    }
+    else
+    {
+    
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+           c2[i][j]=c[k];
+           k+=1;
+        }
+    }
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+          printf("%c",c2[i][j]);
+        }
+        printf("\n");
+    }
+    for(int i=0;i<3;i++)
+    {
+        c3[i]=c2[i][i];
+    }
+    for(int i=3;i<6;i++)
+    {
+        c3[i]=c2[i-3][5-i];
+    }
+    
+    printf("Passcode=%c%c%c%c%c%c\n",c3[0],c3[1],c3[2],c3[3],c3[4],c3[5]);
+    if(strcmp(c3,passc)==0)
+    {
+        printf("Access granted");
+    }
+    else
+    {
+        printf("Access denied");
+    }
+}
+}
