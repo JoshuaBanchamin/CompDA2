@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+   int n,sum=0,avg=0,avg1;
+   printf("Enter the number of students in the class: ");
+   scanf("%d",&n);
+   int mark[n],dob[n];
+   for(int i=0;i<n;i++)
+   {
+       printf("Enter the mark of student %d ",i+1);
+       scanf("%d",&mark[i]);
+   }
+   for(int i=0;i<n;i++)
+   {
+       printf("Enter the month of birth of student %d ",i+1);
+       scanf("%d",&dob[i]);
+   }
+   printf("\nInitial class average ");
+   for(int i=0;i<n;i++)
+   {
+       sum+=mark[i];
+   }
+   avg=sum/n;
+   printf("%d",avg);
+   printf("\nClass average after adding marks ");
+   sum=0;
+   for(int i=0;i<n;i++)
+   {
+       sum+=mark[i]+dob[i];
+   }
+   avg1=sum/n;
+   printf("%d",avg1);
+   int x=avg1-avg;
+   if(x>5)
+   {
+       printf("\nCan implement-Significant improvement in class average");
+   }
+   else
+   {
+       printf("\nNeed not implement-No significant increase in class average");
+   }
+}
